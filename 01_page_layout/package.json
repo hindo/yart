@@ -12,6 +12,7 @@
     "less-plugin-autoprefix": "^1.5.1"
   },
   "scripts": {
+    "start": "open ./public/index.html",
     "build": "gulp less",
     "watch": "gulp watch"
   }
