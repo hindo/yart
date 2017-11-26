@@ -1,0 +1,72 @@
+@import 'const.less';
+
+.container {
+    text-align: left;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.navigation {
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__header {
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    &__item {
+        margin: 7px 0;
+    }
+
+    &__divider {
+        margin: 10px 0;
+        border-bottom: 1px solid @lightGrayColor;
+    }
+}
+
+.navigation-inline {
+    .navigation__list {
+        display: flex;
+        flex: 1;
+    }
+    .navigation__item {
+        flex: 1 1 auto;
+        justify-content: streach;
+    }
+}
+
+.page {
+    &__main {
+        width: 100%;
+    }
+
+    &__navigation {
+        width: 100%;
+    }
+}
+
+.panel {
+    border: 1px solid @lightGrayColor;
+    padding: 30px 20px;
+    border-radius: 4px;
+}
+
+.button {
+    padding: 7px 15px;
+    border-radius: 2px;
+    font-size: 15px;
+
+    &__default {
+        border: 1px solid @lighBlueColor;
+    }
+
+    &__active {
+        color: @buttonActiveColor;
+        background-color: @lighBlueColor;
+    }
+}

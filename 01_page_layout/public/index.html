@@ -4,8 +4,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page layout - demo</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="page main">
+    <header class="page__navigation main__navigation">
+        <nav class="navigation navigation-inline container">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="">Introduction</a></li>
+                <li class="navigation__item"><a class="active" href="">Guidelines</a></li>
+                <li class="navigation__item"><a href="">Components</a></li>
+                <li class="navigation__item"><a href="">Constructs</a></li>
+                <li class="navigation__item"><a href="">Layouts</a></li>
+                <li class="navigation__item"><a href="">Github</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="page__main">
+        <header class="main__header">
+            <div class="container">
+                <h2>Guidelines</h2>
+            </div>
+        </header>
+        <div class="container main__content">
+            <aside class="content-navigation">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="">Accessibility</a></li>
+                        <li class="navigation__item"><a href="">Colour</a></li>
+                        <li class="navigation__item"><a href="">Browsers and devices</a></li>
+                        <li class="navigation__item"><a href="">Design patterns</a></li>
+                        <li class="navigation__item"><a href="">Icons</a></li>
+                        <li class="navigation__divider"></li>
+                        <li class="navigation__item"><a href="">Imagery</a></li>
+                        <li class="navigation__item"><a href="">Responsive UI</a></li>
+                        <li class="navigation__item"><a href="">Shortcodes</a></li>
+                        <li class="navigation__item"><a href="">Typography</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <aside class="article-navigation">
+                <nav class="navigation">
+                    <p class="navigation__header">Contents</p>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#section_1">Section 1</a></li>
+                        <li class="navigation__item"><a href="#section_2">Section 2</a></li>
+                        <li class="navigation__item"><a href="#section_3">Section 3</a></li>
+                        <li class="navigation__item"><a href="#section_4">Section 4</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <article class="article">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima nisi quisquam dicta! Corrupti deleniti excepturi vel! Rem tempore perspiciatis quisquam culpa saepe laudantium, ex voluptate. Fugiat at maxime molestiae incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad excepturi quo deleniti, dolores est ea cupiditate autem dolor quod quibusdam delectus? Quisquam eos unde, adipisci ipsa quas voluptate aperiam fugit.</p>
 
+                <section class="article__section">
+                    <h3 id="section_1" class="article__section__header">
+                        Sub section 1
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate minima tempora illo! Eligendi officiis dolorum minus molestiae nulla, voluptas quaerat, similique placeat eum nemo, quis nostrum eveniet soluta. Fugiat, aliquid?</p>
+                    <section class="panel article__buttons">
+                        <a class="button button__active" href="">Read more...</a>
+                        <a class="button button__default" href="">Save progress</a>
+                    </section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+                </section>
+                <section class="article__section">
+                    <h3 id="section_2" class="article__section__header">
+                        Sub section 2
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+                </section>
+                <section class="article__section">
+                    <h3 id="section_3" class="article__section__header">
+                        Sub section 3
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+                </section>
+                <section class="article__section">
+                    <h3 id="section_4" class="article__section__header">
+                        Sub section 4
+                    </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, cum deleniti? Eligendi explicabo quidem rem omnis delectus ad illo consequatur quas illum temporibus cupiditate aperiam ipsum, distinctio voluptate sapiente! Tempore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatum nam modi maxime quod quaerat aspernatur, quam debitis enim rerum similique praesentium at, beatae, adipisci earum molestiae minus porro saepe?</p>
+                </section>
+            </article>
+        </div>
+    </section>
+    <footer class="main__footer">
+        <div class="container">
+            Created @ 2017
+        </div>
+    </footer>
 </body>
 </html>
