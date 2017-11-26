@@ -1,13 +1,14 @@
-@media screen and (max-width: 768px) {
-    .rom {
-        width: 100%;
+@media screen and (min-width: 960px) {
+    .content-navigation {
+        flex: 0 0 17%;
     }
 
-    .col-2 {
-        width: 12.5%;
-    }
+    .article-navigation {
+        flex: 0 0 17%;
 
-    .col-8 {
-        width: 75%;
+        .navigation {
+            position: fixed;
+            border-left: 2px solid @lightGrayColor;
+        }
     }
 }

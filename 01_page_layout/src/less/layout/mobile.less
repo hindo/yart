@@ -1,1 +1,59 @@
-// put somethig here
+@media screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 959px) {
+
+    .content-navigation, .article-navigation, .article {
+        flex: 1;
+        margin: 0;
+    }
+    .content-navigation {
+        order: 0;
+
+        .navigation__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .navigation__item {
+            text-align: center;
+            flex: 1 1 auto;
+            justify-content: streach;
+        }
+
+        .navigation__divider {
+            flex: 1 1 100%;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    .article-navigation {
+        order: 1;
+
+        .navigation {
+            position: initial;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid @lightGrayColor;
+        }
+
+        .navigation__list {
+            display: flex;
+        }
+
+        .navigation__item {
+            flex: 1 1 auto;
+            justify-content: streach;
+        }
+    }
+
+    .article {
+        order: 2;
+    }
+
+    .main {
+        &__content {
+            flex-direction: column;
+        }
+    }
+}

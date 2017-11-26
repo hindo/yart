@@ -1,0 +1,118 @@
+@columnsMargin: 30px;
+
+.content-navigation {
+    @marginBase: 20px;
+
+    order: 0;
+    font-size: 16px;
+    margin: 0 @columnsMargin 0 0;
+
+    .navigation__item {
+        font-size: 14px;
+        margin-bottom: @marginBase;
+
+        a {
+            color: @accentColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .navigation__divider {
+        margin: @marginBase 0;
+    }
+}
+
+.article-navigation {
+    flex: 0 0 17%;
+    order: 2;
+    font-size: 17px;
+    margin: 0 0 0 @columnsMargin;
+
+    .navigation {
+        padding: 20px 0 20px 20px;
+
+        .navigation__header {
+            margin-top: 0;
+            color: @accentColor;
+            font-size: 14px;
+        }
+
+        .navigation__item {
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.article {
+    order: 1;
+    flex: 1 1 auto;
+    margin: 0 @columnsMargin;
+
+    p:first-child {
+        margin-top: 0;
+    }
+}
+
+.main {
+    @marginBase: 40px;
+    @marginBaseDouble: 2 * @marginBase;
+
+    &__content {
+        display: flex;
+        flex: 1;
+    }
+    &__navigation {
+        border-bottom: 1px solid @accentColor;
+        background-color: @mainColor;
+
+        .navigation__item {
+            border-left: 1px solid @accentColor;
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                display: block;
+                color: @lightAccentColor;
+                padding: 15px 0;
+
+                &.active {
+                    color: @buttonActiveColor;
+                }
+
+                &:hover {
+                    color: @buttonActiveColor;
+                }
+            }
+
+            &:last-child {
+                border-right: 1px solid @accentColor;
+            }
+        }
+    }
+
+    &__header {
+        color: @headerFontColor;
+        background-color: @mainColor;
+
+        & h2 {
+            margin: 0;
+            margin-bottom: @marginBase;
+            padding: @marginBaseDouble 0 @marginBase;
+            font-size: 40px;
+            font-weight: 200;
+        }
+    }
+
+    &__footer {
+        font-size: 15px;
+        color: @headerFontColor;
+        background-color: @mainColor;
+        padding: @marginBase / 2;
+    }
+}
