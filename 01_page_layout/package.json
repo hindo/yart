@@ -6,6 +6,12 @@
   "author": "Piotr Pabich",
   "license": "MIT",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
     "less": "^2.7.3"
+  },
+  "scripts": {
+    "build": "gulp less",
+    "watch": "gulp watch"
   }
 }
