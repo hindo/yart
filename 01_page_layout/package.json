@@ -1,0 +1,11 @@
+{
+  "name": "finder_page_layout",
+  "version": "1.0.0",
+  "description": "Page layout implementation",
+  "main": "index.js",
+  "author": "Piotr Pabich",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^2.7.3"
+  }
+}
