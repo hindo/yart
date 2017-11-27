@@ -3,8 +3,8 @@
 .container {
     text-align: left;
     margin: 0 auto;
-    width: 90%;
-    max-width: 1400px;
+    width: @documentDefaultWidth;
+    max-width: @documentMaxDefaultWidth;
 }
 
 .navigation {
@@ -15,17 +15,17 @@
     }
 
     &__header {
-        margin: 20px 0;
+        margin: @navigationHeaderMargin;
         padding: 0;
     }
 
     &__item {
-        margin: 7px 0;
+        margin: @navigationItemMargin;
     }
 
     &__divider {
-        margin: 10px 0;
-        border-bottom: 1px solid @lightGrayColor;
+        margin: @navigationDividerMargin;
+        border-bottom: @navigationDividerWidth solid @navigationDividerColor;
     }
 }
 
@@ -51,22 +51,25 @@
 }
 
 .panel {
-    border: 1px solid @lightGrayColor;
-    padding: 30px 20px;
-    border-radius: 4px;
+    padding: @panelPadding;
+    border: @panelBorderWidth @panelBorderType @lightGrayColor;
+    border-radius: @panelBorderRadius;
 }
 
 .button {
-    padding: 7px 15px;
-    border-radius: 2px;
-    font-size: 15px;
+    box-sizing: border-box;
+    padding: @buttonPadding;
+    border-radius: @buttonBorderRadius;
+    font-size: @buttonFontSize;
 
     &__default {
-        border: 1px solid @lighBlueColor;
+        color: @buttonDefaultFontColor;
+        border: @buttonBorderWidth @buttonBorderType @buttonDefaultBorderColor;
+        background-color: @buttonDefaultBackgruondColor;
     }
 
     &__active {
-        color: @buttonActiveColor;
-        background-color: @lighBlueColor;
+        color: @buttonActiveFontColor;
+        background-color: @buttonActiveBackgruondColor;
     }
 }

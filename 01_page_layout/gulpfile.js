@@ -2,12 +2,12 @@ const gulp = require('gulp')
 const less = require('gulp-less')
 const path = require('path')
 const LessPluginAutoPrefix = require('less-plugin-autoprefix')
-const autoprefixPlugin = new LessPluginAutoPrefix({browsers: ["last 2 versions"]})
+const autoPrefixPlugin = new LessPluginAutoPrefix({browsers: ['last 2 versions']})
 
 gulp.task('less', () => {
   const le = less({
     paths: [path.join(__dirname, 'less', 'includes')],
-    plugins: [autoprefixPlugin]
+    plugins: [autoPrefixPlugin]
   }).on('error', (e) => {
     console.log(e.message)
     le.end()
