@@ -1,0 +1,23 @@
+.column-row {
+    display: table-header-group;
+    background-color: #d4d4d4;
+    height: 50px;
+    line-height: 50px;
+}
+
+.column {
+    display: table-cell;
+    border-right: 1px solid #b1b1b1;
+    border-bottom: 1px solid #b1b1b1;
+    padding: 0 7px;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.sortable {
+    cursor: pointer;
+    color: blue;
+}

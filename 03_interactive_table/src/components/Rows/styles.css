@@ -1,0 +1,19 @@
+.row {
+    height: 40px;
+    line-height: 40px;
+    display: table-row;
+}
+
+.row:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+.row:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.cell {
+    display: table-cell;
+    border-right: 1px solid #b1b1b1;
+    padding: 0 7px;
+}

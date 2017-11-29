@@ -1,0 +1,32 @@
+.tfooter {
+    display: table-caption;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 7px;
+    color: #ffffff;
+}
+
+.filter-field {
+    color: #353a40;
+    margin-right: 10px;
+    border-radius: 2px;
+    background: #ffffff;
+    padding: 7px 10px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.filter-field input[type="text"] {
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.filter-field input[type="range"] {
+    outline: none;
+    border: none;
+    height: 11px;
+    margin: 0 5px;
+}
