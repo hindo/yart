@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { petService } from '../service'
 import Table from '../components/Table'
+import ErrorMessage from '../components/ErrorMessage/ErrorMessage'
 
 class TableContainer extends Component {
   state = {
+    isLoading: true,
     pets: [],
     filteredPets: [],
     columns: [{
@@ -38,6 +40,7 @@ class TableContainer extends Component {
     },
     priceRange: [],
     animals: [],
+    error: {}
   }
 
   componentDidMount () {
@@ -45,18 +48,33 @@ class TableContainer extends Component {
   }
 
   fetchPets = () => {
+    this.setState({
+      isLoading: true
+    })
     petService.fetch().then(
       (pets) => {
         const priceRange = this.getMinMaxRange(pets)
         const animals = this.getDistinctItems(pets)
+        const error = {state: 0}
+
         this.setState({
+          isLoading: false,
           pets,
           priceRange,
-          animals
+          animals,
+          error
         })
       },
       (err) => {
-        console.error(err)
+        console.log(err)
+        const error = {
+          state: 1,
+          message: err
+        }
+        this.setState({
+          isLoading: false,
+          error
+        })
       }
     )
   }
@@ -96,6 +114,7 @@ class TableContainer extends Component {
 
   render () {
     const handlers = {
+      noItems: this.fetchPets,
       setSort: this.setSort,
       setFilterOption: this.setFilterOption,
     }
@@ -103,13 +122,20 @@ class TableContainer extends Component {
       animals: this.state.animals,
       priceRange: this.state.priceRange,
     }
+    const connectionError = this.state.error.state
     return (
-    <Table columns={this.state.columns}
+      <div>
+        { connectionError ? <ErrorMessage error={this.state.error} errorHandler={this.fetchPets} /> : (
+        <Table
+           isLoading={this.state.isLoading}
+           columns={this.state.columns}
            items={this.state.pets}
            sortOptions={this.state.sortOptions}
            filterOptions={this.state.filterOptions}
            handlers={handlers}
-           additional={additional} />)
+           additional={additional} />
+        )}
+      </div>)
   }
 }
 

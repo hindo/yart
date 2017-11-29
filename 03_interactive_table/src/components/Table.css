@@ -9,3 +9,11 @@
     height: 200px;
     max-height: 300px;
 }
+
+.special-info {
+    display: table-caption;
+    caption-side: bottom;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}

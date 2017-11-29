@@ -1,4 +1,6 @@
 import React from 'react'
+import FontAwesome from 'react-fontawesome'
+
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Rows from './Rows/Rows'
@@ -29,6 +31,8 @@ const Table = (props) => {
 
   return (<div className='table'>
     <Header items={props.columns} setSort={props.handlers.setSort} sortOptions={sortOptions} />
+    { props.isLoading ? <div className='special-info'> <FontAwesome name='spinner' spin /> loading ... </div> : '' }
+    { (!props.items || !props.items.length) && !props.isLoading ? <div className='special-info'>No items. <a className='clickable' onClick={() => props.handlers.noItems()}><FontAwesome name='refresh' /> Reload</a></div> : ''}
     <div className='tbody'>{filteredItems.map((row, idx) => {
       return <Rows key={idx} columns={props.columns} item={row} />
     })
